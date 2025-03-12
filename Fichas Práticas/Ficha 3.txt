@@ -1,0 +1,31 @@
+1.
+SELECT empNo,fName,lName,address,DOB,sex,position,deptNo
+FROM Employee
+ORDER BY lName, fName
+
+2.
+SELECT *
+FROM Employee
+WHERE sex = 'Feminino'
+
+3.
+SELECT fName, lName, address
+FROM Employee, Department
+WHERE Department.mgrEmpNo = Employee.empNo;
+
+4.
+SELECT fName, lName, address
+FROM Employee, Department
+WHERE Employee.deptNo = Department.deptNo AND Department.deptName = 'IT'
+
+5.
+SELECT fName, lName
+FROM Employee, Project
+WHERE Employee.deptNo = Project.deptNo AND Project.projName = 'SCCS'
+
+6.
+SELECT fName, lName
+FROM Employee, Department
+WHERE Employee.DOB < date('1960-01-01') AND Employee.empNo = Department.mgrEmpNo
+
+7.

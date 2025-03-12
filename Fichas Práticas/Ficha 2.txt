@@ -1,0 +1,8 @@
+π empNo,fName,lName,address,DOB,sex,position,deptNo (Employee)
+
+σ (sex = 'Feminino')(Employee)
+
+π fName,lName,address,empNo( σ (Department.mgrEmpNo = Employee.empNo)(Department ⨝ Employee))
+
+ π fName,lName,address (σ (Department.deptName = 'IT')(Department ⨝ Employee))
+
